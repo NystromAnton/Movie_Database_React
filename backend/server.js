@@ -15,13 +15,45 @@ mainLibrary.addMovie("Scary Bee", 2007, "PG18", ["Horror", "Comedy", "Adventure"
 
 app.get('/allMovies', (req, res) => {
     let allMovies = mainLibrary.getAllMovies();
+    res.status(200);
     res.json(allMovies);
 });
 app.get('/genre/:genre', (req,res) => {
     let genre = req.params.genre;
     let moviesByGenre = mainLibrary.getMoviesByGenre(genre);
-    res.json(moviesByGenre);
+    if(moviesByGenre.length === 0) {
+        res.status(400);
+        res.send("Not an existing genre");
+    }
+    else {
+        res.status(200);
+        res.json(moviesByGenre);
+    }
+    
 });
+app.get('/movie/:movieName', (req, res) => {
+    let name = req.params.movieName;
+    let movieByName = mainLibrary.getMovieByName(name);
+
+    if(movieByName.length === 0) {
+        res.status(400);
+        res.send("Sorry this movie is not in the database");
+    }
+    else {
+        res.status(200);
+        res.json(movieByName);
+    }
+});
+
+//TODO: Get by anything by using something like app.get('api/:attribute/:nameToGetBy) 
+/*app.get('/api/:attribute/:name', (req, res) => {
+    let name = req.params.name;
+    let attribute = req.params.attribute;
+    let movieByName = mainLibrary.getMovies(attribute, name);
+    res.json(movieByName);
+});*/
+
+
 
 const PORT = process.env.PORT || 5000;
 
