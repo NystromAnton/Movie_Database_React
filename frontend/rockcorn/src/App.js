@@ -3,12 +3,15 @@ import "./App.css";
 import MovieCard from "./components/MovieCard";
 import Genre from "./components/Genre";
 import MoviePage from "./components/MoviePage";
+import Topbar from './components/Navbar.js'
 
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-function App() {
+function App() {  
   return (
+    <div>  
+    <Topbar/>
     <Router>
       <Switch>
         <Route exact path='/' component={Genre} />
@@ -16,6 +19,7 @@ function App() {
         <Route path='/movie' component={MoviePage} />
       </Switch>
     </Router>
+    </div>
   );
 }
 
