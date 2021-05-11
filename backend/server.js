@@ -50,6 +50,10 @@ mainLibrary.addMovie(
   ["Jones", "Kevin Hart", "Bob", "A Bee"]
 );
 
+// Add genres
+genres = ["Horror", "Comedy", "Adventure", "Action", "Sci-Fi"];
+mainLibrary.addGenres(genres);
+
 //let bugMovies = mainLibrary.getMoviesByGenre("Action");
 //console.log(bugMovies);
 app.use(function (req, res, next) {
@@ -58,6 +62,10 @@ app.use(function (req, res, next) {
 });
 app.get("/allMovies", (req, res) => {
   let allMovies = mainLibrary.getAllMovies();
+  res.json(allMovies);
+});
+app.get("/allGenres", (req, res) => {
+  let allMovies = mainLibrary.getAllGenres();
   res.json(allMovies);
 });
 app.get("/genre/:genre", (req, res) => {

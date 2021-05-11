@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import MovieCard from "./components/MovieCard";
 import Genre from "./components/Genre";
+import FrontPage from "./components/FrontPage";
 import MoviePage from "./components/MoviePage";
 
 import Col from "react-bootstrap/Col";
@@ -11,7 +12,8 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path='/' component={Genre} />
+        <Route exact path='/' component={FrontPage} />
+        <Route exact path='/genre' component={Genre} />
         <Route path='/movies' component={MovieCard} />
         <Route path='/movie' component={MoviePage} />
       </Switch>
