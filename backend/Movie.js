@@ -11,6 +11,14 @@ class Movie {
         let sum = rating.reduce((a,b) => a + b, 0);
         let avg = (sum / rating.length) || 0;
         this.averageRating = avg;
+
+        //Funky randomly generated data for the movies.
+
+        this.jumpScares = Math.floor(Math.random() * 100);
+        this.explosions = Math.floor(Math.random() * 1000);
+        this.laugtableScenes = Math.floor(Math.random() * 70);
+        this.rewatchable = Math.floor(Math.random() * 101);
+        this.rockInThePicture = Math.floor(Math.random() * 121);
     };
 };
 module.exports = Movie;

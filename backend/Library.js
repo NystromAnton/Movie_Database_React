@@ -18,5 +18,18 @@ class Library {
         });
         return filterdMovies;
     };
+    getMovieByName(movieName) {
+        let filterdMovies = this.movies.filter((oneMovie) => {
+            return oneMovie.name.includes(movieName);
+        });
+        return filterdMovies;
+    };
+
+    getMovies(attribute, name) {
+        let filterdMovies = this.movies.filter((oneMovie) => {
+            return oneMovie.attribute.includes(name);
+        });
+        return filterdMovies;
+    };
 };
 module.exports = Library;
