@@ -2,3 +2,9 @@ img {
     width: 10em;
     margin-left: 2em;
 }
+
+.mr-auto {
+    position: relative;
+    left: 65%;
+    margin-top: 0.7em;
+}
