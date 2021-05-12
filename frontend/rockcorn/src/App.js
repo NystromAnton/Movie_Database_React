@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import MovieCard from "./components/MovieCard";
 import Genre from "./components/Genre";
-import MoviePage from "./components/MoviePage";
+import MoviePage from "./components//moviePage/MoviePage";
 
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
