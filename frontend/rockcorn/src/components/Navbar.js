@@ -3,12 +3,13 @@ import { Navbar, NavItem, NavDropdown, MenuItem, Nav } from 'react-bootstrap';
 import React from "react";
 import axios from "axios";
 import CustomButton from "./CustomButton";
+import "./Navbar.css";
 
 class Topbar extends React.Component {
     render () {
         return (
             <Navbar bg="#FFFFFF" expand="lg">
-            <Navbar.Brand href="/">Rockcorn</Navbar.Brand>
+            <Navbar.Brand href="/"><img src={"././rockcorn_logo.png"}></img></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">

@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
+import "./components/Navbar.css";
 import MovieCard from "./components/MovieCard";
 import Genre from "./components/Genre";
 import MoviePage from "./components/MoviePage";
