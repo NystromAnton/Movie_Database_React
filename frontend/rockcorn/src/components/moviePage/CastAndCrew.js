@@ -41,21 +41,25 @@ const CastAndCrew = () => {
 
   return (
     <div>
-      <Container>
-        <Row>
-          <h3>Cast & Crew</h3>
-          {tempC.map((c) => (
-            <Col key={c.key} xs={6} md={4}>
-              <Card style={{ backgroundColor: "#E5E5E5" }}>
-                <Card.Img variant="top" src={TheRockPic} />
-                <Card.Body>
-                  <Card.Title>{c.name}</Card.Title>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      </Container>
+      <Row>
+        <h3
+          style={{
+            textAlign: "center",
+          }}
+        >
+          Cast & Crew
+        </h3>
+        {tempC.map((c) => (
+          <Col key={c.key} xs={6} md={4}>
+            <Card style={{ backgroundColor: "#E5E5E5" }}>
+              <Card.Img variant="top" src={TheRockPic} />
+              <Card.Body>
+                <Card.Title>{c.name}</Card.Title>
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
     </div>
   );
 };

@@ -2,14 +2,15 @@ import React from "react";
 import Title from "./Title";
 import MovieInfo from "./MovieInfo";
 import MovieTrailer from "./MovieTrailer";
-import Container from "react-bootstrap/esm/Container";
-import Row from "react-bootstrap/esm/Row";
+import { Container, Row, Col } from "react-bootstrap";
 import CastAndCrew from "./CastAndCrew";
+import Plot from "./Plot";
+import DirectorWrite from "./DirectorWrite";
 
 function MoviePage() {
   return (
-    <div style={{ backgroundColor: "#E5E5E5" }}>
-      <Container>
+    <div>
+      <Container style={{ padding: "5%" }}>
         <Row>
           <Title></Title>
         </Row>
@@ -17,7 +18,17 @@ function MoviePage() {
           <MovieInfo></MovieInfo>
         </Row>
         <Row>
-          <MovieTrailer></MovieTrailer>
+          <Col md={12}>
+            <MovieTrailer></MovieTrailer>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12} md={8}>
+            <Plot></Plot>
+          </Col>
+          <Col xs={12} md={4}>
+            <DirectorWrite></DirectorWrite>
+          </Col>
         </Row>
         <Row>
           <CastAndCrew></CastAndCrew>
