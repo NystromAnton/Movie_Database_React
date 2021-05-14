@@ -1,16 +1,28 @@
 import logo from "./logo.svg";
 import "./App.css";
+import "./components/Navbar.css";
 import MovieCard from "./components/MovieCard";
 import Genre from "./components/Genre";
+
 import MoviePage from "./components//moviePage/MoviePage";
+
+
+import Topbar from './components/Navbar.js'
+
 
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import Testing from "./components/moviePage/Testing";
 
-function App() {
+
+
+function App() {  
+
   return (
+    <div>  
+    <Topbar/>
     <Router>
       <Switch>
         <Route exact path="/" component={Genre} />
@@ -19,6 +31,7 @@ function App() {
         <Route path="/testing" component={Testing} />
       </Switch>
     </Router>
+    </div>
   );
 }
 
