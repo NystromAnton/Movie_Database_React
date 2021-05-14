@@ -4,7 +4,7 @@ import { Container, Row, Col, Image } from "react-bootstrap";
 function MovieNumbers() {
   return (
     <div>
-      <Row>
+      <Row style={{ fontFamily: "Roboto" }}>
         <Col xs={4} md={6}>
           PG13
         </Col>

@@ -10,7 +10,7 @@ import DirectorWrite from "./DirectorWrite";
 function MoviePage() {
   return (
     <div>
-      <Container style={{ padding: "5%" }}>
+      <Container style={{ padding: "5%" }} className="d-block d-lg-none">
         <Row>
           <Title></Title>
         </Row>
@@ -32,6 +32,37 @@ function MoviePage() {
         </Row>
         <Row>
           <CastAndCrew></CastAndCrew>
+        </Row>
+      </Container>
+      <Container fluid className="d-none d-lg-block">
+        <Row>
+          <Col lg={6}>
+            <MovieTrailer></MovieTrailer>
+          </Col>
+          <Col lg={6}>
+            <Container>
+              <Row>
+                <Title></Title>
+              </Row>
+              <Row>
+                <MovieInfo></MovieInfo>
+              </Row>
+              <Row>
+                <Col lg={6}>
+                  <Plot></Plot>
+                </Col>
+                <Col lg={6}>
+                  <DirectorWrite></DirectorWrite>
+                </Col>
+              </Row>
+            </Container>
+          </Col>
+        </Row>
+        <Row>
+          <Col lg={6}>
+            <CastAndCrew></CastAndCrew>
+          </Col>
+          <Col lg={6}>Photos</Col>
         </Row>
       </Container>
     </div>

@@ -13,13 +13,12 @@ function Title() {
         <Col xs={2}>
           <Button
             style={{
-              width: "100%",
-              height: "100%",
               color: "black",
               backgroundColor: "transparent",
               border: "none",
               outline: "none",
             }}
+            size={"lg"}
           >
             <ArrowLeft
               style={{
@@ -32,7 +31,7 @@ function Title() {
         <Col xs={10}>
           <h2
             style={{
-              fontSize: "5vw",
+              fontSize: "3vw",
               fontFamily: "Red Hat Display",
               textAlign: "center",
               lineHeight: "100%",
