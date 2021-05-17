@@ -51,7 +51,7 @@ const CastAndCrew = () => {
         </h3>
         {tempC.map((c) => (
           <Col key={c.key} xs={6} md={4}>
-            <Card style={{ backgroundColor: "#E5E5E5" }}>
+            <Card>
               <Card.Img variant="top" src={TheRockPic} />
               <Card.Body>
                 <Card.Title>{c.name}</Card.Title>

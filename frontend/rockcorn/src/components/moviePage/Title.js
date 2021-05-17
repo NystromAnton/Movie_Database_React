@@ -6,7 +6,7 @@ import Row from "react-bootstrap/Row";
 import "./Title.css";
 import { ArrowLeft } from "react-bootstrap-icons";
 
-function Title() {
+function Title({ title }) {
   return (
     <div>
       <Row>
@@ -31,14 +31,14 @@ function Title() {
         <Col xs={10}>
           <h2
             style={{
-              fontSize: "3vw",
+              fontSize: "2em",
               fontFamily: "Red Hat Display",
               textAlign: "center",
               lineHeight: "100%",
               verticalAlign: "middle",
             }}
           >
-            Jumanji: The next level
+            {title}
           </h2>
         </Col>
       </Row>
