@@ -4,7 +4,7 @@ import { Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
 import { Card } from "react-bootstrap";
 
-function DirectorWrite() {
+function DirectorWrite({ director, writer }) {
   return (
     <div>
       <Row>
@@ -13,7 +13,7 @@ function DirectorWrite() {
             <Card.Body>
               <Card.Title>Director</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
-                The Rock
+                {director}
               </Card.Subtitle>
             </Card.Body>
           </Card>
@@ -23,7 +23,7 @@ function DirectorWrite() {
             <Card.Body>
               <Card.Title>Writer</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
-                The Stone
+                {writer}
               </Card.Subtitle>
             </Card.Body>
           </Card>

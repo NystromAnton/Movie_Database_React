@@ -8,37 +8,7 @@ import { Image } from "react-bootstrap";
 
 import TheRockPic from "./pics/theRock.jpg";
 
-const CastAndCrew = () => {
-  //const [castCrew, setCastCrew] = useState(["Dave", "The rock", "the dude"]);
-
-  const tempC = [
-    {
-      key: 1,
-      name: "The rock",
-      picture: "Pic",
-    },
-    {
-      key: 2,
-      name: "The stone",
-      picture: "Pic",
-    },
-    {
-      key: 3,
-      name: "The dude",
-      picture: "Pic",
-    },
-    {
-      key: 4,
-      name: "Big Rock",
-      picture: "Pic",
-    },
-    {
-      key: 5,
-      name: "Small rock",
-      picture: "Pic",
-    },
-  ];
-
+const CastAndCrew = ({ CandC }) => {
   return (
     <div>
       <Row>
@@ -49,10 +19,10 @@ const CastAndCrew = () => {
         >
           Cast & Crew
         </h3>
-        {tempC.map((c) => (
-          <Col key={c.key} xs={6} md={4}>
+        {CandC.map((c) => (
+          <Col xs={6} md={4}>
             <Card>
-              <Card.Img variant="top" src={TheRockPic} />
+              <Card.Img variant="top" src={c.picture} />
               <Card.Body>
                 <Card.Title>{c.name}</Card.Title>
               </Card.Body>

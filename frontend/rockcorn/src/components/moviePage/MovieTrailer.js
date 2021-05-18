@@ -5,7 +5,8 @@ import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/esm/Col";
 
-function MovieTrailer() {
+function MovieTrailer({ trailerID }) {
+  console.log(trailerID);
   return (
     <div
       className="video"
@@ -24,7 +25,7 @@ function MovieTrailer() {
           width: "100%",
           height: "100%",
         }}
-        src={"https://www.youtube.com/embed/2QKg5SZ_35I"}
+        src={`https://www.youtube.com/embed/${trailerID}`}
         frameBorder="0"
       />
     </div>
