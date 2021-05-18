@@ -82,11 +82,7 @@ app.get("/allGenres", (req, res) => {
   let allMovies = mainLibrary.getAllGenres();
   res.json(allMovies);
 });
-app.get("/genre/:genre", (req, res) => {
-  let genre = req.params.genre;
-  let moviesByGenre = mainLibrary.getMoviesByGenre(genre);
-  res.json(moviesByGenre);
-});
+
 app.get("/movie/:movieName", (req, res) => {
   let name = req.params.movieName;
   let movieByName = mainLibrary.getMovieByName(name);

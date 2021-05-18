@@ -7,6 +7,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
+import MovieCard from "./MovieCard";
 
 import Container from "react-bootstrap/Container";
 class FrontPage extends React.Component {
@@ -61,18 +62,7 @@ class FrontPage extends React.Component {
                   {this.state.movies.map(function (movie, index) {
                     return (
                       <Col key={index}>
-                        <Card style={{ width: "18rem", color: "red" }}>
-                          <Card.Body>
-                            <Card.Title>{movie.name}</Card.Title>
-                            <Card.Text>{movie.year}</Card.Text>
-                            <Card.Text>{movie.age}</Card.Text>
-                            <Card.Text>{movie.genre}</Card.Text>
-                            <CustomButton
-                              route='/movies'
-                              text='Gå till genre'
-                            ></CustomButton>
-                          </Card.Body>
-                        </Card>
+                        <MovieCard movie={movie}></MovieCard>
                       </Col>
                     );
                   })}
@@ -88,7 +78,6 @@ class FrontPage extends React.Component {
                         <Card style={{ width: "18rem", color: "red" }}>
                           <Card.Body>
                             <Card.Title>{genre.name}</Card.Title>
-
                             <CustomButton
                               route='/movies'
                               text='Gå till genre'
@@ -118,18 +107,7 @@ class FrontPage extends React.Component {
                   {this.state.movies.map(function (movie, index) {
                     return (
                       <Col key={index}>
-                        <Card style={{ width: "18rem", color: "red" }}>
-                          <Card.Body>
-                            <Card.Title>{movie.name}</Card.Title>
-                            <Card.Text>{movie.year}</Card.Text>
-                            <Card.Text>{movie.age}</Card.Text>
-                            <Card.Text>{movie.genre}</Card.Text>
-                            <CustomButton
-                              route='/movies'
-                              text='Gå till genre'
-                            ></CustomButton>
-                          </Card.Body>
-                        </Card>
+                        <MovieCard movie={movie}></MovieCard>
                       </Col>
                     );
                   })}
@@ -145,7 +123,6 @@ class FrontPage extends React.Component {
                         <Card style={{ width: "18rem", color: "red" }}>
                           <Card.Body>
                             <Card.Title>{genre.name}</Card.Title>
-
                             <CustomButton
                               route='/movies'
                               text='Gå till genre'
