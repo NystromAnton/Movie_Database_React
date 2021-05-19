@@ -13,10 +13,10 @@ class Explosion extends React.Component {
           autoplay={false}
           loop={true}
           onMouseOver={spritesheet => {
-            spritesheet.play();
+            spritesheet.goToAndPlay(1);
           }}
           onMouseLeave={spritesheet => {
-            spritesheet.pause();
+            spritesheet.goToAndPause(32);
           }}
         />
       );
