@@ -8,6 +8,7 @@ import Row from "react-bootstrap/Row";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import MovieCard from "./MovieCard";
+import Explosion from "./animations/Explosion";
 
 import Container from "react-bootstrap/Container";
 class FrontPage extends React.Component {
@@ -74,7 +75,7 @@ class FrontPage extends React.Component {
                 <Row xs={1} md={2}>
                   {this.state.genres.map(function (genre, index) {
                     return (
-                      <Col key={index}>
+                      <Col key={index}>                        
                         <Card style={{ width: "18rem", color: "red" }}>
                           <Card.Body>
                             <Card.Title>{genre.name}</Card.Title>
@@ -120,6 +121,7 @@ class FrontPage extends React.Component {
                   {this.state.genres.map(function (genre, index) {
                     return (
                       <Col key={index}>
+                        <Explosion />
                         <Card style={{ width: "18rem", color: "red" }}>
                           <Card.Body>
                             <Card.Title>{genre.name}</Card.Title>
