@@ -1,9 +1,23 @@
 const Movie = require("./Movie");
+const Genre = require("./Genre");
 
 class Library {
   constructor() {
     this.movies = [];
+
+    this.genres = [];
   }
+
+  addGenres(genreArray) {
+    for (var i = 0; i < genreArray.length; i++) {
+      let tempGenre = new Genre(genreArray[i]);
+      this.genres.push(tempGenre);
+    }
+  }
+  getAllGenres() {
+    return this.genres;
+  }
+
   addMovie(
     name,
     year,
