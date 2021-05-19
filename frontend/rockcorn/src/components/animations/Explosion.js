@@ -7,7 +7,7 @@ class Explosion extends React.Component {
         <Spritesheet
           image={`https://raw.githubusercontent.com/danilosetra/react-responsive-spritesheet/master/assets/images/examples/sprite-image-horizontal.png`}
           widthFrame={420}
-          heightFrame={200}          
+          heightFrame={500}          
           steps={14}
           fps={10}
           loop={true}

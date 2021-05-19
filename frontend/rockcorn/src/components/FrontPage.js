@@ -78,6 +78,7 @@ class FrontPage extends React.Component {
                       <Col key={index}>                        
                         <Card style={{ width: "18rem", color: "red" }}>
                           <Card.Body>
+                            <Explosion/>
                             <Card.Title>{genre.name}</Card.Title>
                             <CustomButton
                               route='/movies'
@@ -120,10 +121,10 @@ class FrontPage extends React.Component {
                 <Row xs={1} md={2}>
                   {this.state.genres.map(function (genre, index) {
                     return (
-                      <Col key={index}>
-                        <Explosion />
+                      <Col key={index}>                        
                         <Card style={{ width: "18rem", color: "red" }}>
                           <Card.Body>
+                            <Explosion/>
                             <Card.Title>{genre.name}</Card.Title>
                             <CustomButton
                               route='/movies'
