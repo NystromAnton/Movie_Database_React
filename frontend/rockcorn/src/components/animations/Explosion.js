@@ -5,11 +5,11 @@ class Explosion extends React.Component {
     render () {   
       return (
         <Spritesheet          
-          image={require("./spriteimage.png").default}
-          widthFrame={420}
-          heightFrame={500}          
-          steps={14}    
-          fps={10}
+          image={require("./explosion-sprite.png").default}
+          widthFrame={256.125}
+          heightFrame={251.25}          
+          steps={32}    
+          fps={20}
           autoplay={false}
           loop={true}
           onMouseOver={spritesheet => {
