@@ -10,7 +10,8 @@ class Movie {
     time,
     trailerID,
     director,
-    writer
+    writer,
+    pictures
   ) {
     this.name = name;
     this.year = year;
@@ -23,7 +24,7 @@ class Movie {
     this.trailerID = trailerID;
     this.director = director;
     this.writer = writer;
-    this.pictures;
+    this.pictures = pictures;
 
     let sum = rating.reduce((a, b) => a + b, 0);
     let avg = sum / rating.length || 0;
