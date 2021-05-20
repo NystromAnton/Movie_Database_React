@@ -1,7 +1,6 @@
 import Card from "react-bootstrap/Card";
 import React from "react";
 import axios from "axios";
-import Button from "react-bootstrap/Button";
 import CustomButton from "./CustomButton";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -50,13 +49,13 @@ class FrontPage extends React.Component {
     }
     if (width < 600) {
       return (
-        <div align='center' className='my-4'>
+        <div align="center" className="my-4">
           <Tabs
-            className='justify-content-center my-3'
-            defaultActiveKey='Top'
-            variant='pills'
+            className="justify-content-center my-3"
+            defaultActiveKey="Top"
+            variant="pills"
           >
-            <Tab eventKey='Top' title='Top list'>
+            <Tab eventKey="Top" title="Top list">
               <Container>
                 <Row xs={1} md={2}>
                   {this.state.movies.map(function (movie, index) {
@@ -69,7 +68,7 @@ class FrontPage extends React.Component {
                 </Row>
               </Container>
             </Tab>
-            <Tab eventKey='genre' title='Genre'>
+            <Tab eventKey="genre" title="Genre">
               <Container>
                 <Row xs={1} md={2}>
                   {this.state.genres.map(function (genre, index) {
@@ -79,8 +78,8 @@ class FrontPage extends React.Component {
                           <Card.Body>
                             <Card.Title>{genre.name}</Card.Title>
                             <CustomButton
-                              route='/movies'
-                              text='Gå till genre'
+                              route="/movies"
+                              text="Gå till genre"
                             ></CustomButton>
                           </Card.Body>
                         </Card>
@@ -95,13 +94,13 @@ class FrontPage extends React.Component {
       );
     } else {
       return (
-        <div align='center' className='my-4'>
+        <div align="center" className="my-4">
           <Tabs
-            className='justify-content-center my-3'
-            defaultActiveKey='Top'
-            variant='pills'
+            className="justify-content-center my-3"
+            defaultActiveKey="Top"
+            variant="pills"
           >
-            <Tab eventKey='Top' title='Top list'>
+            <Tab eventKey="Top" title="Top list">
               <Container>
                 <Row xs={1} md={2}>
                   {this.state.movies.map(function (movie, index) {
@@ -114,7 +113,7 @@ class FrontPage extends React.Component {
                 </Row>
               </Container>
             </Tab>
-            <Tab eventKey='Genre' title='Genre'>
+            <Tab eventKey="Genre" title="Genre">
               <Container>
                 <Row xs={1} md={2}>
                   {this.state.genres.map(function (genre, index) {
@@ -124,8 +123,8 @@ class FrontPage extends React.Component {
                           <Card.Body>
                             <Card.Title>{genre.name}</Card.Title>
                             <CustomButton
-                              route='/movies'
-                              text='Gå till genre'
+                              route="/movies"
+                              text="Gå till genre"
                             ></CustomButton>
                           </Card.Body>
                         </Card>

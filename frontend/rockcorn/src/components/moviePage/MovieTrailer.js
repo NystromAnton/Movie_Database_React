@@ -1,9 +1,4 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
-import { MDBContainer } from "mdbreact";
-import Container from "react-bootstrap/esm/Container";
-import Row from "react-bootstrap/esm/Row";
-import Col from "react-bootstrap/esm/Col";
 
 function MovieTrailer({ trailerID }) {
   console.log(trailerID);

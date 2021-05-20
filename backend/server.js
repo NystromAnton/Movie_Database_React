@@ -1,9 +1,18 @@
 const express = require("express");
 const path = require("path");
 const Library = require("./Library");
+const AllUsers = require("./AllUsers");
 const app = express();
 
 mainLibrary = new Library();
+userDataBase = new AllUsers();
+userDataBase.addUser("Bob", "Bob");
+userDataBase.addUser("Nike", "NikePass");
+userDataBase.addUser("Klas", "klas123");
+userDataBase.addUser("Bob", "BobPassword2");
+console.log(userDataBase.getAllUsers());
+console.log(userDataBase.getUser("Bob", "BobPasswor"));
+
 mainLibrary.addMovie(
   "Jumanji: Welcome to the Jungle",
   2017,
@@ -13,16 +22,19 @@ mainLibrary.addMovie(
   [2, 4, 2],
   [
     {
+      id: 1,
       name: "Auli'i Cravalho",
       picture:
         "https://m.media-amazon.com/images/M/MV5BNjIxZDI2MTctZTNhOC00NjdlLWI5ZTEtZjZhMmNkNGViZjczXkEyXkFqcGdeQXVyMTE5ODYzODk@._V1_UY317_CR8,0,214,317_AL_.jpg",
     },
     {
+      id: 2,
       name: "The Rock",
       picture:
         "https://m.media-amazon.com/images/M/MV5BMTkyNDQ3NzAxM15BMl5BanBnXkFtZTgwODIwMTQ0NTE@._V1_UX214_CR0,0,214,317_AL_.jpg",
     },
     {
+      id: 3,
       name: "Rachel House",
       picture:
         "https://m.media-amazon.com/images/M/MV5BMWNmNzEzMGUtMDc1NS00OTlkLWExMzktNTAzOGQ2N2RkMjI3XkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_UY317_CR20,0,214,317_AL_.jpg",
@@ -88,23 +100,10 @@ mainLibrary.addMovie(
     allPics: [],
   }
 );
-/*mainLibrary.addMovie(
-  "Scary Bee",
-  2007,
-  "PG18",
-  ["Horror", "Comedy", "Adventure"],
-  "Super duper scary movie",
-  [5, 4, 5, 5, 5],
-  ["Jones", "Kevin Hart", "Bob", "A Bee"]
-);*/
 
 // Add genres
 genres = ["Horror", "Comedy", "Adventure", "Action", "Sci-Fi"];
 mainLibrary.addGenres(genres);
-
-//let bugMovies = mainLibrary.getMoviesByGenre("Action");
-//console.log(bugMovies);
-
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "http://localhost:3000"); // update to match the domain you will make the request from
   next();
@@ -145,14 +144,19 @@ app.get("/movie/:movieName", (req, res) => {
   }
 });
 
-//TODO: Get by anything by using something like app.get('api/:attribute/:nameToGetBy)
-/*app.get('/api/:attribute/:name', (req, res) => {
-    let name = req.params.name;
-    let attribute = req.params.attribute;
-    let movieByName = mainLibrary.getMovies(attribute, name);
-    res.json(movieByName);
-});*/
-
+app.get("/users/:userName/:password", (req, res) => {
+  let userName = req.params.userName;
+  let password = req.params.password;
+  console.log(userName);
+  console.log(password);
+  let user = userDataBase.getUser(userName, password);
+  console.log(user);
+  if (user.length === 0) {
+    res.send(false).status(400);
+  } else {
+    res.json(user[0].id).status(200);
+  }
+});
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));

@@ -1,26 +1,23 @@
 import React from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Image,
-  Table,
-  Button,
-  Modal,
-} from "react-bootstrap";
+import { Container, Row, Table, Button, Modal } from "react-bootstrap";
 import { Star } from "react-bootstrap-icons";
 import { useState } from "react";
+import Review from "./Review";
 
 function MovieNumbers({ year, age, genre, avgRate, time }) {
   const [showing, setShowing] = useState(false);
 
+  const handleClose = (event) => {
+    setShowing(false);
+  };
+  const handleShow = (event) => {
+    setShowing(true);
+  };
+
   return (
     <div>
-      <Modal size="sm" show={showing} onHide={() => setShowing(false)}>
-        <Modal.Header closeButton>
-          <Modal.Title>Rate the movie</Modal.Title>
-        </Modal.Header>
-        <Modal.Body></Modal.Body>
+      <Modal animation={false} size="sm" show={showing} onHide={handleClose}>
+        <Review></Review>
       </Modal>
       <div
         style={{
@@ -39,7 +36,7 @@ function MovieNumbers({ year, age, genre, avgRate, time }) {
                     <Star style={{ marginRight: "5px" }}></Star> {avgRate}
                   </td>
                   <td>
-                    <Button variant="light" onClick={() => setShowing(true)}>
+                    <Button variant="light" onClick={handleShow}>
                       Rate
                     </Button>
                   </td>
@@ -71,7 +68,7 @@ function MovieNumbers({ year, age, genre, avgRate, time }) {
                     {avgRate}
                   </td>
                   <td>
-                    <Button variant="light" onClick={() => setShowing(true)}>
+                    <Button variant="light" onClick={handleShow}>
                       Rate
                     </Button>
                   </td>

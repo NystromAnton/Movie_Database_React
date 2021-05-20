@@ -1,8 +1,7 @@
 import React from "react";
 
-import { Container, Col, Row, Image } from "react-bootstrap";
+import { Col, Row, Image } from "react-bootstrap";
 import MovieNumbers from "./MovieNumbers";
-import TheRockPic from "./pics/theRock.jpg";
 
 //"https://i.pinimg.com/originals/3d/75/61/3d75610e80b82baabfe224ee0e7b3ac7.jpg"
 

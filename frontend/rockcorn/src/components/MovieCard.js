@@ -1,7 +1,6 @@
 import Card from "react-bootstrap/Card";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import CustomButton from "./CustomButton";
 import ticket from "./ticket.png";
 import jumanji from "./jumanji.jpg";
 import Col from "react-bootstrap/Col";
@@ -28,9 +27,9 @@ function MovieCard(props) {
     return null;
   }
   return (
-    <div align='center' className='my-4'>
+    <div align="center" className="my-4">
       <Card
-        border='none'
+        border="none"
         style={{
           border: "none",
           width: "18rem",
@@ -44,7 +43,7 @@ function MovieCard(props) {
         <Card.Body>
           <Card.Img src={ticket} style={{ width: "30rem", height: "10rem" }} />
           <Card.ImgOverlay style={{ width: "30rem", height: "10rem" }}>
-            <Container align='left'>
+            <Container align="left">
               <Row
                 style={{
                   top: "1rem",
@@ -54,7 +53,7 @@ function MovieCard(props) {
               >
                 <Col xs={2}>
                   <Image
-                    class='my-2 ml-5'
+                    class="my-2 ml-5"
                     src={jumanji}
                     style={{
                       width: "4rem",

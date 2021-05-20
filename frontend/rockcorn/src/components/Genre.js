@@ -1,7 +1,6 @@
 import Card from "react-bootstrap/Card";
 import React from "react";
 import axios from "axios";
-import Button from "react-bootstrap/Button";
 import CustomButton from "./CustomButton";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
@@ -41,7 +40,7 @@ class Genre extends React.Component {
     }
     if (width < 600) {
       return (
-        <div align='center' className='my-4'>
+        <div align="center" className="my-4">
           {this.state.movies.map(function (movie, index) {
             return (
               <Row>
@@ -53,8 +52,8 @@ class Genre extends React.Component {
                       <Card.Text>{movie.age}</Card.Text>
                       <Card.Text>{movie.genre}</Card.Text>
                       <CustomButton
-                        route='/movies'
-                        text='Gå till genre'
+                        route="/movies"
+                        text="Gå till genre"
                       ></CustomButton>
                     </Card.Body>
                   </Card>
@@ -66,7 +65,7 @@ class Genre extends React.Component {
       );
     } else {
       return (
-        <div align='center' className='my-4'>
+        <div align="center" className="my-4">
           <Container>
             <Row xs={1} md={2}>
               {this.state.movies.map(function (movie, index) {
@@ -79,8 +78,8 @@ class Genre extends React.Component {
                         <Card.Text>{movie.age}</Card.Text>
                         <Card.Text>{movie.genre}</Card.Text>
                         <CustomButton
-                          route='/movies'
-                          text='Gå till genre'
+                          route="/movies"
+                          text="Gå till genre"
                         ></CustomButton>
                       </Card.Body>
                     </Card>
