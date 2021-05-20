@@ -5,11 +5,11 @@ class ScaryAnimation extends React.Component {
     render () {   
       return (
         <Spritesheet          
-          image={require("./explosion-sprite.png").default}
-          widthFrame={256.125}
-          heightFrame={251.25}          
-          steps={32}    
-          fps={20}
+          image={require("./scary-sprite.png").default}
+          widthFrame={280}
+          heightFrame={199}          
+          steps={9}    
+          fps={10}
           autoplay={false}
           loop={true}
           onMouseOver={spritesheet => {

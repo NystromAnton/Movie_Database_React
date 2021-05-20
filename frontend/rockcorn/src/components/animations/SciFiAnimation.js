@@ -5,11 +5,11 @@ class SciFiAnimation extends React.Component {
     render () {   
       return (
         <Spritesheet          
-          image={require("./explosion-sprite.png").default}
-          widthFrame={256.125}
-          heightFrame={251.25}          
-          steps={32}    
-          fps={20}
+          image={require("./scifi-sprite.png").default}
+          widthFrame={364}
+          heightFrame={160}          
+          steps={8}    
+          fps={10}
           autoplay={false}
           loop={true}
           onMouseOver={spritesheet => {
