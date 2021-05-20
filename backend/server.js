@@ -31,7 +31,11 @@ mainLibrary.addMovie(
   "119 min",
   "2QKg5SZ_35I",
   "Jake Kasdan",
-  "Chris McKenna"
+  "Chris McKenna",
+  {
+    head: "https://m.media-amazon.com/images/M/MV5BODQ0NDhjYWItYTMxZi00NTk2LWIzNDEtOWZiYWYxZjc2MTgxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    allPics: [],
+  }
 );
 mainLibrary.addMovie(
   "Journey to the Mysterious Island",
@@ -44,7 +48,11 @@ mainLibrary.addMovie(
   "94 min",
   "qdFCjwcK8IE",
   "Brad Peyton",
-  "Brian Gunn"
+  "Brian Gunn",
+  {
+    head: "https://m.media-amazon.com/images/M/MV5BMjA5MTE1MjQyNV5BMl5BanBnXkFtZTcwODI4NDMwNw@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    allPics: [],
+  }
 );
 mainLibrary.addMovie(
   "G.I Joe: Retaliation",
@@ -57,7 +65,11 @@ mainLibrary.addMovie(
   "100 min",
   "w4_SRkrsA30",
   "Jon M. Chu",
-  "Rhett Reese"
+  "Rhett Reese",
+  {
+    head: "https://m.media-amazon.com/images/M/MV5BNzk5ODM0OTQ0N15BMl5BanBnXkFtZTcwODg2ODE4OA@@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    allPics: [],
+  }
 );
 mainLibrary.addMovie(
   "Moana",
@@ -70,7 +82,11 @@ mainLibrary.addMovie(
   "97 min",
   "LKFuXETZUsI",
   "Ron Clements",
-  "Jared Bush"
+  "Jared Bush",
+  {
+    head: "https://m.media-amazon.com/images/M/MV5BMjI4MzU5NTExNF5BMl5BanBnXkFtZTgwNzY1MTEwMDI@._V1_UX182_CR0,0,182,268_AL_.jpg",
+    allPics: [],
+  }
 );
 /*mainLibrary.addMovie(
   "Scary Bee",

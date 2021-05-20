@@ -50,6 +50,7 @@ function MoviePage() {
               genre={movieData[0].genre}
               avgRate={movieData[0].averageRating}
               time={movieData[0].time}
+              headPic={movieData[0].pictures.head}
             ></MovieInfo>
           </Row>
           <Row>
@@ -101,6 +102,7 @@ function MoviePage() {
                       genre={movieData[0].genre}
                       avgRate={movieData[0].averageRating}
                       time={movieData[0].time}
+                      headPic={movieData[0].pictures.head}
                     ></MovieInfo>
                   </Row>
                   <Row style={{ marginLeft: "5px", marginRight: "5px" }}>

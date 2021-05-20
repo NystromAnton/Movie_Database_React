@@ -29,7 +29,8 @@ class Library {
     time,
     trailerID,
     director,
-    writer
+    writer,
+    pictures
   ) {
     let tempMovie = new Movie(
       name,
@@ -42,7 +43,8 @@ class Library {
       time,
       trailerID,
       director,
-      writer
+      writer,
+      pictures
     );
     this.movies.push(tempMovie);
   }
