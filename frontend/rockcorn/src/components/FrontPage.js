@@ -8,6 +8,8 @@ import Row from "react-bootstrap/Row";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import MovieCard from "./MovieCard";
+import Explosion from "./animations/Explosion";
+import Animation from "./animations/Animation";
 
 import Container from "react-bootstrap/Container";
 class FrontPage extends React.Component {
@@ -74,9 +76,10 @@ class FrontPage extends React.Component {
                 <Row xs={1} md={2}>
                   {this.state.genres.map(function (genre, index) {
                     return (
-                      <Col key={index}>
+                      <Col key={index}>                        
                         <Card style={{ width: "18rem", color: "red" }}>
                           <Card.Body>
+                            <Animation genre="hallo"/>
                             <Card.Title>{genre.name}</Card.Title>
                             <CustomButton
                               route='/movies'
@@ -119,9 +122,10 @@ class FrontPage extends React.Component {
                 <Row xs={1} md={2}>
                   {this.state.genres.map(function (genre, index) {
                     return (
-                      <Col key={index}>
+                      <Col key={index}>                        
                         <Card style={{ width: "18rem", color: "red" }}>
                           <Card.Body>
+                            <Animation genre={genre.name}/>
                             <Card.Title>{genre.name}</Card.Title>
                             <CustomButton
                               route='/movies'
